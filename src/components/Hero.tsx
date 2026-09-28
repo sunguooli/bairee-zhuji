@@ -24,14 +24,14 @@ export default function Hero() {
       />
       <div className="relative mx-auto max-w-5xl px-6 py-16 md:py-24">
         <p className="mb-3 text-sm tracking-[0.3em] text-amber-500 font-medium">
-          四级 430 → 六级 480 · 100 天系统训练
+          四级 430 → 六级 480 · 75 天冲刺 · 12 月 12 日上场
         </p>
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
           百日筑基
         </h1>
         <p className="mt-4 max-w-2xl text-muted-foreground text-lg leading-relaxed">
-          前 30 天补地基，中间 40 天专项突破，最后 30 天真题与模考。
-          每天 2–2.5 小时，不追进度，追“当日任务清零”。
+          原定百日，实测距考试 75 天：前 28 天补地基，15 天专项突破，22 天真题精做，10 天模考冲刺。
+          每天 2–2.5 小时，不追进度，追"当日任务清零"。
         </p>
         <div className="mt-8 max-w-xl">
           <div className="mb-2 flex items-baseline justify-between text-sm">

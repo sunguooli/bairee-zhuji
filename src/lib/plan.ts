@@ -1,8 +1,8 @@
-// 百日筑基 · CET-6 学习计划数据层
-// 计划起始日：2026-09-28（第 1 天），第 100 天：2027-01-05
+// 百日筑基 · CET-6 学习计划数据层（75 天冲刺版）
+// 计划起始日：2026-09-28（第 1 天），第 75 天 = 2026-12-12 六级笔试日（15:00–17:25）
 
 export const START_DATE = new Date(2026, 8, 28) // 2026-09-28
-export const TOTAL_DAYS = 100
+export const TOTAL_DAYS = 75
 
 export function dayOfPlan(now: Date = new Date()): number {
   const ms = now.getTime() - START_DATE.getTime()
@@ -37,35 +37,35 @@ export const PHASES: Phase[] = [
     name: '筑基期',
     subtitle: '词汇一轮 · 长难句 · 磨耳朵',
     startDay: 1,
-    endDay: 30,
+    endDay: 28,
     goal: '六级新增词汇过完一轮，能独立拆解长难句，听力适应六级语速。',
     color: 'amber',
     daily: [
-      { id: 'p1-vocab', label: '六级词汇 80 个', minutes: 40, detail: '旧词复习优先于新词（第 1/3/7/15 天回头复习）' },
-      { id: 'p1-sentence', label: '长难句拆解 5 句', minutes: 40, detail: '用真题阅读长句，自己切分主谓宾再对解析' },
-      { id: 'p1-listen', label: '听力磨耳朵', minutes: 40, detail: '盲听 1 遍 → 看原文听 1 遍 → 跟读 1 遍' },
-      { id: 'p1-reading', label: '真题精读 1 篇', minutes: 30, detail: '每个生词、每个长句都搞懂，不是做题是拆文章' },
-      { id: 'p1-review', label: '当日复盘', minutes: 20, detail: '回顾全部笔记，标记没记住的内容' },
+      { id: 'p1-vocab', label: '六级词汇 100 个', minutes: 45, detail: '旧词复习优先于新词（第 1/3/7/15 天回头复习），QwertyLearner 错题本打底' },
+      { id: 'p1-sentence', label: '长难句拆解 4 句', minutes: 30, detail: '用真题阅读长句，自己切分主谓宾再对解析' },
+      { id: 'p1-listen', label: '听力磨耳朵', minutes: 40, detail: '盲听 1 遍 → 看原文听 1 遍 → 跟读 1 遍（Echo-Loop / 真题音频）' },
+      { id: 'p1-reading', label: '真题精读 1 篇', minutes: 25, detail: '每个生词、每个长句都搞懂，不是做题是拆文章' },
+      { id: 'p1-review', label: '当日复盘', minutes: 15, detail: '回顾全部笔记，标记没记住的内容' },
     ],
-    notes: ['前 30 天不刷完整套题', '第 7/14/21/28 天减量复习 + 周测', '第 30 天阶段自测（23 年 6 月真题听力+阅读）'],
+    notes: ['前 28 天不刷完整套题', '第 7/14/21 天减量复习 + 周测', '第 28 天阶段自测（23 年 6 月真题听力+阅读）'],
   },
   {
     id: 2,
     name: '专项期',
     subtitle: '听力 / 阅读 / 写作 / 翻译 逐项突破',
-    startDay: 31,
-    endDay: 70,
+    startDay: 29,
+    endDay: 43,
     goal: '四大题型形成自己的解题套路，弱项额外加量。',
     color: 'emerald',
     daily: [],
-    notes: ['按周日历轮换主攻项', '写作翻译必须动笔，积累输出肌肉记忆', '第 50 天中期检查：比第 30 天提升 ≥10 个百分点'],
+    notes: ['按周日历轮换主攻项', '写作翻译必须动笔，积累输出肌肉记忆', '第 43 天中期检查：比第 28 天提升 ≥10 个百分点'],
   },
   {
     id: 3,
     name: '真题期',
     subtitle: '近 10 套真题精做',
-    startDay: 71,
-    endDay: 90,
+    startDay: 44,
+    endDay: 65,
     goal: '2021–2025 年真题全部精做完，错题不再错第二次。',
     color: 'sky',
     daily: [
@@ -80,12 +80,12 @@ export const PHASES: Phase[] = [
     id: 4,
     name: '冲刺期',
     subtitle: '全真模考 · 模板固化',
-    startDay: 91,
-    endDay: 100,
+    startDay: 66,
+    endDay: 75,
     goal: '状态调整到考试模式，只巩固不新学。',
     color: 'rose',
     daily: [],
-    notes: ['模考严格按 15:00–17:25 考试时段', '第 98 天词汇收尾，不学新词', '第 100 天（考前一天）不学习，检查耳机电池准考证'],
+    notes: ['模考严格按 15:00–17:25 考试时段（12 月 12 日 15:00 开考）', '第 73 天词汇收尾，不学新词', '第 74 天（考前一天）不学习，检查耳机电池准考证'],
   },
 ]
 
@@ -94,7 +94,7 @@ export function phaseOfDay(day: number): Phase {
   return PHASES.find((p) => day >= p.startDay && day <= p.endDay) ?? PHASES[3]
 }
 
-// 专项期（第 31–70 天）周日历轮换
+// 专项期（第 29–43 天）周日历轮换
 export const WEEKLY_ROTATION: { day: string; focus: string; tasks: string; tip: string }[] = [
   { day: '周一', focus: '听力', tasks: '1 套完整听力（25 min 限时）+ 逐句精听错题段 + 跟读', tip: '六级听力只放一遍且题文不同序，必须先读选项预判' },
   { day: '周二', focus: '阅读', tasks: '选词填空 2 篇 + 长篇匹配 1 篇（限时）+ 仔细阅读 1 篇精读', tip: '选词填空性价比最低，10 min 内做完即可' },
@@ -113,10 +113,10 @@ export const DAILY_BASELINE: Task[] = [
 
 // 检查点
 export const MILESTONES = [
-  { day: 30, title: '筑基自测', metric: '2023 年 6 月真题听力+阅读', target: '正确率 ≥ 40%' },
-  { day: 50, title: '中期检查', metric: '听力+阅读各 1 套', target: '比第 30 天提升 ≥ 10 个百分点' },
-  { day: 90, title: '真题期验收', metric: '近 3 套真题平均分', target: '≥ 445 分（425 及格线 + 20 安全垫）' },
-  { day: 100, title: '考前模考', metric: '全真模考稳定分', target: '480+ 即具备较大通过把握' },
+  { day: 28, title: '筑基自测', metric: '2023 年 6 月真题听力+阅读', target: '正确率 ≥ 40%' },
+  { day: 43, title: '中期检查', metric: '听力+阅读各 1 套', target: '比第 28 天提升 ≥ 10 个百分点' },
+  { day: 65, title: '真题期验收', metric: '近 3 套真题平均分', target: '≥ 445 分（425 及格线 + 20 安全垫）' },
+  { day: 74, title: '考前模考', metric: '全真模考稳定分', target: '480+ 即具备较大通过把握' },
 ]
 
 // 个人档案
@@ -211,7 +211,7 @@ export const RESOURCES = [
   },
   {
     name: 'vocabularyTools · 真题生词标注工具',
-    desc: '给定词库范围，自动标注英文文本中的生词并生成可点读单词表，解决“查文章生词浪费大量时间”的问题。',
+    desc: '给定词库范围，自动标注英文文本中的生词并生成可点读单词表，解决"查文章生词浪费大量时间"的问题。',
     url: 'https://github.com/Carlos-yyt/vocabularyTools',
   },
   {

@@ -16,7 +16,7 @@ export default function Phases() {
     <section className="mx-auto max-w-5xl px-6 py-12">
       <h2 className="mb-2 text-2xl font-bold tracking-tight">四阶段路线</h2>
       <p className="mb-6 text-sm text-muted-foreground">
-        {fmt(dateOfDay(1))} — {fmt(dateOfDay(100))} · 阶段一旦开始不顺，先找回当前阶段的节奏，不要跳阶段。
+        {fmt(dateOfDay(1))} — {fmt(dateOfDay(75))} · 阶段一旦开始不顺，先找回当前阶段的节奏，不要跳阶段。
       </p>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {PHASES.map((p) => {
