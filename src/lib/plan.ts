@@ -202,6 +202,60 @@ export const METHODS = [
   },
 ]
 
+// 装备库：GitHub 高 star 工具与计划的对应关系
+export const TOOLKIT = [
+  {
+    name: 'QwertyLearner',
+    role: '词汇主力',
+    stars: '23.2k',
+    phases: '筑基期每日 → 之后只复习',
+    usage:
+      '筑基期每天 45 min：CET6 词库新学 1 个 List（约 100 词），打错的词自动进错题本；健身组间、等饭的碎片时间刷错题本。第 29 天起不再开新 List，每天 30 min 只清错题本 + 真题生词。',
+    status: '本地已部署（本机预览入口）',
+    url: 'https://github.com/RealKai42/qwerty-learner',
+  },
+  {
+    name: 'MuJing 暮境',
+    role: '语境记忆',
+    stars: '4.6k',
+    phases: '筑基期每日 20 min → 第 44 天停用',
+    usage:
+      '晚上复盘后，把当天错词放进真实影视语境里看用法、听发音——词汇在语境里复现才算掌握。周末用电影片段模式整体巩固本周错词。只复习，不追新词。',
+    status: '本地绿色版，解压即用',
+    url: 'https://github.com/tangshimin/MuJing',
+  },
+  {
+    name: 'Echo-Loop',
+    role: '听力训练',
+    stars: '4.0k',
+    phases: '全周期 → 冲刺期减量',
+    usage:
+      '筑基期每天 40 min 磨耳朵：盲听 → 看原文听 → 跟读，正好对应它的精听流程；健身 1–2 h 顺手覆盖 ≥20 min 听力底线。专项期听力日（周一/三/五）用它做 25 min 限时听力 + 错题段逐句精听。第 74–75 天每天只轻听 1 段保持耳感。',
+    status: '安卓安装包已就绪，装到手机',
+    url: 'https://github.com/echo-loop/Echo-Loop',
+  },
+  {
+    name: 'Earthworm 蚯蚓',
+    role: '句子构造',
+    stars: '11.1k',
+    phases: '专项期写作日 → 第 44 天停用',
+    usage:
+      '每周四写作训练前 15 min 连词造句热身，把"看得懂"变成"写得出"；碎片时间刷 1–2 课。写作翻译的本质是句子构造，这门课直接练这个。',
+    status: '在线版，零安装',
+    url: 'https://github.com/cuixueshe/earthworm',
+  },
+  {
+    name: '沉浸式翻译 / read-frog',
+    role: '泛读辅助（可选）',
+    stars: '19.1k / 9.9k',
+    phases: '筑基期精读加餐，真题阅读禁用',
+    usage:
+      '只在读外刊加餐时开双语对照；AI 讲解需要自己的 API key，没有 key 就用内置词典。注意：做真题阅读时关掉一切翻译插件，考场上没有插件。',
+    status: '浏览器商店安装',
+    url: 'https://github.com/immersive-translate/immersive-translate',
+  },
+]
+
 // 资源
 export const RESOURCES = [
   {

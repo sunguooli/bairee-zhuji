@@ -4,6 +4,7 @@ import Phases from '@/components/Phases'
 import Today from '@/components/Today'
 import Milestones from '@/components/Milestones'
 import Methods from '@/components/Methods'
+import Toolkit from '@/components/Toolkit'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Profile />
       <Phases />
       <Today />
+      <Toolkit />
       <Milestones />
       <Methods />
       <footer className="border-t border-border">
